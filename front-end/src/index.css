@@ -1,0 +1,214 @@
+/* index.css - design moderne, épuré et responsive pour Todo App */
+
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+  min-height: 100vh;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button, input {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+/* === Login Page === */
+.login-container {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #3b82f6;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background: #2563eb;
+}
+
+/* === Todo Page === */
+.todo-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  width: 90%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.logout-button {
+  background: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.logout-button:hover {
+  background: #dc2626;
+}
+
+.todo-form {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.todo-form input {
+  padding: 0.65rem;
+  border-radius: 0.5rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+}
+
+.todo-form button {
+  background: #10b981;
+  color: white;
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.todo-form button:hover {
+  background: #059669;
+}
+
+.todo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  overflow-y: auto;
+  max-height: 65vh;
+  padding-right: 6px;
+}
+
+.todo-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 3px;
+}
+
+.todo-item {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.todo-item.completed {
+  background: #dcfce7;
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.todo-details strong {
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.todo-details p {
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.todo-details small {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.todo-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.todo-actions button {
+  background: transparent;
+  color: #475569;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.todo-actions button:hover {
+  color: #1e293b;
+}
+
+.todo-edit-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  background: #f1f5f9;
+}
